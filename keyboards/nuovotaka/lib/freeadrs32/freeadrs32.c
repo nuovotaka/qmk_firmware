@@ -91,9 +91,7 @@ void free32knob_oled_render_layerinfo(void) {
     //
     // 現在のレイヤーを表示する
     oled_write_ln_P(PSTR("Layer"), false);
-    char layer_str[12];
-    snprintf(layer_str, sizeof(layer_str), "%d", get_highest_layer(layer_state));
-    oled_write_ln(layer_str, false);
+    oled_write_ln(get_u8_str(get_highest_layer(layer_state)), ' '), false);
 
     // 改行を入れる
     oled_write_ln_P(PSTR(" "), false);
@@ -137,11 +135,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
     if (!process_record_user(keycode, record)) {
         return false;
-    }
-
-    // strip QK_MODS part.
-    if (keycode >= QK_MODS && keycode <= QK_MODS_MAX) {
-        keycode &= 0xff;
     }
 
     return true;

@@ -50,13 +50,13 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
         ENCODER_CCW_CW(KC_LEFT, KC_RIGHT)         // Encoder 3
     },
     [1] = {
-        ENCODER_CCW_CW(KC_PAGE_UP, KC_PAGE_DOWN), // Encoder 1
-        ENCODER_CCW_CW(KC_UP, KC_DOWN),           // Encoder 2
-        ENCODER_CCW_CW(KC_LEFT, KC_RIGHT)         // Encoder 3
+        ENCODER_CCW_CW(_______, _______),        // Encoder 1
+        ENCODER_CCW_CW(_______, _______),        // Encoder 2
+        ENCODER_CCW_CW(_______, _______)         // Encoder 3
     },
     [2] = {
-        ENCODER_CCW_CW(KC_PAGE_UP, KC_PAGE_DOWN), // Encoder 1
-        ENCODER_CCW_CW(KC_UP, KC_DOWN),           // Encoder 2
-        ENCODER_CCW_CW(KC_LEFT, KC_RIGHT)         // Encoder 3
+        ENCODER_CCW_CW(_______, _______),        // Encoder 1
+        ENCODER_CCW_CW(_______, _______),        // Encoder 2
+        ENCODER_CCW_CW(_______, _______)         // Encoder 3
     }};
 #endif

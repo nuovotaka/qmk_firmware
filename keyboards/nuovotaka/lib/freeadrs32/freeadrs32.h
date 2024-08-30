@@ -32,5 +32,5 @@ void oledkit_render_mylogo(void);
 void free32knob_oled_render_keyinfo(void);
 
 /// free32_knob_oled_render_layerinfo renders current layer status information to
-/// OLED.
+/// OLED.  
 void free32knob_oled_render_layerinfo(void);

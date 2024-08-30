@@ -3,20 +3,12 @@
   "keyboard_name": "freeadrs32_knob",
   "maintainer": "nuovotaka",
   "url": "",
-  "bootloader": "caterina",
-  "processor": "atmega32u4",
+  "development_board": "promicro",
   "build": {
     "lto": true
   },
   "features": {
-    "audio": false,
-    "bootmagic": false,
-    "command": false,
-    "console": false,
     "extrakey": true,
-    "mousekey": false,
-    "nkro": false,
-    "backlight": false,
     "rgblight": true,
     "encoder": true
   },
@@ -42,8 +34,6 @@
     "vid": "0x8832"
   },
   "rgblight":{
-    "driver": "ws2812",
-    "pin": "D3",
     "led_count": 32,
     "animations": {
       "breathing": false,
@@ -62,6 +52,9 @@
     "hue_steps": 17,
     "saturation_steps": 17,
     "sleep": true
+  },
+  "ws2812":{
+    "pin": "D3"
   },
   "layouts": {
     "LAYOUT": {

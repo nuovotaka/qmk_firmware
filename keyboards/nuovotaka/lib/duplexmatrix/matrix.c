@@ -53,7 +53,7 @@ static void duplex_scan(matrix_row_t current_matrix[]) {
     // scan column to row
     for (uint8_t row = 0; row < PINNUM_ROW; row++) {
         if (row_pins[row] != NO_PIN) {
-        set_pin_output(row_pins[row]);
+            set_pin_output(row_pins[row]);
         }
         matrix_output_select_delay();
         for (uint8_t col = 0; col < PINNUM_COL; col++) {
@@ -62,7 +62,7 @@ static void duplex_scan(matrix_row_t current_matrix[]) {
             }
         }
         if (row_pins[row] != NO_PIN) {
-        set_pin_input(row_pins[row]);
+            set_pin_input(row_pins[row]);
         }
         matrix_output_unselect_delay(row, false);
     }
@@ -71,7 +71,7 @@ static void duplex_scan(matrix_row_t current_matrix[]) {
     matrix_row_t shifter = ((matrix_row_t)1) << PINNUM_COL;
     for (uint8_t col = 0; col < PINNUM_COL; col++, shifter <<= 1) {
         if (col_pins[col] != NO_PIN) {
-        set_pin_output(col_pins[col]);
+            set_pin_output(col_pins[col]);
         }
         matrix_output_select_delay();
         for (uint8_t row = 0; row < PINNUM_ROW; row++) {
@@ -80,7 +80,7 @@ static void duplex_scan(matrix_row_t current_matrix[]) {
             }
         }
         if (col_pins[col] != NO_PIN) {
-        set_pin_input(col_pins[col]);
+            set_pin_input(col_pins[col]);
         }
         matrix_output_unselect_delay(col, false);
     }

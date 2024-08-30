@@ -15,23 +15,16 @@ __attribute__((weak)) void oledkit_render_mylogo(void) {
     oled_advance_page(false);
 }
 
-__attribute__((weak)) void oledkit_render_info_user(void)
-{
-    oled_clear();
-    oledkit_render_mylogo();
-}
-
 bool oled_task_kb(void) {
     if (!oled_task_user()) {
         return false;
     }
     oledkit_render_mylogo();
-    oledkit_render_info_user();
 
     return false;
 }
 
-__attribute__((weak)) oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
     return OLED_ROTATION_270;
 }
 
